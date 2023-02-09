@@ -1,10 +1,14 @@
-<p align="center">
-<img src="logo.png" width="700">
+<div align="center">
+  <p>
+    <a href="https://www.satellite-image-deep-learning.com/">
+        <img src="logo.png" width="700">
+    </a>
 </p>
-
-This page lists information on the training and deployment of deep learning models applied to satellite and aerial imagery. Learn more at:
+  <h2>Training and deployment of deep learning models applied to satellite and aerial imagery.</h2>
 
 # 👉 [satellite-image-deep-learning.com](https://www.satellite-image-deep-learning.com/) 👈
+
+</div>
 
 **How to use this repository:** if you know exactly what you are looking for (e.g. you have the paper name) you can `Control+F` to search for it in this page (or search in the raw markdown).
 
@@ -238,6 +242,7 @@ Flask is often used to serve up a simple web app that can expose a ML model
 * [SlumMappingViaRemoteSensingImagery](https://github.com/hamna-moieez/SlumMappingViaRemoteSensingImagery) -> learning slum segmentation and localization using satellite imagery and visualising on a flask app
 * [cloud-removal-deploy](https://github.com/XavierJiezou/cloud-removal-deploy) -> flask app for cloud removal
 * [clearcut_detection](https://github.com/QuantuMobileSoftware/clearcut_detection) -> research & web-service for clearcut detection
+* [staticmaps-function](https://github.com/pamelafox/staticmaps-function) -> A FastAPI that can generate maps using the py-staticmaps package. Designed for deployment to Azure Functions
 
 # Neural nets in space
 Processing on board a satellite allows less data to be downlinked. e.g. super-resolution image might take 8 images to generate, then a single image is downlinked. Other applications include cloud detection and collision avoidance.
