@@ -12,7 +12,9 @@
 
 **How to use this repository:** if you know exactly what you are looking for (e.g. you have the paper name) you can `Control+F` to search for it in this page (or search in the raw markdown).
 
-# Training
+## Contents
+
+# Model training
 This section discusses training machine learning models.
 
 ## Metrics
@@ -79,17 +81,17 @@ This section includes tips and ideas I have picked up from other practitioners i
 * [How To Normalize Satellite Images for Deep Learning](https://medium.com/sentinel-hub/how-to-normalize-satellite-images-for-deep-learning-d5b668c885af)
 * [ML Tooling 2022](https://developmentseed.org/blog/2022-09-27-ml-tooling) by developmentseed
 
-## Free online compute
+# Free online compute
 A GPU is required for training deep learning models (but not necessarily for inferencing), and this section lists a couple of free Jupyter environments with GPU available. There is a good overview of online Jupyter development environments [on the fastai site](https://course19.fast.ai). I personally use Colab Pro with data hosted on Google Drive, or Sagemaker if I have very long running training jobs.
 
-### Google Colab
+## Google Colab
 * Collaboratory [notebooks](https://colab.research.google.com) with GPU as a backend for free for 12 hours at a time. Note that the GPU may be shared with other users, so if you aren't getting good performance try reloading.
 * Also a pro tier for $10 a month -> https://colab.research.google.com/signup
 * Tensorflow, pytorch & fastai available but you may need to update them
 * [Colab Alive](https://chrome.google.com/webstore/detail/colab-alive/eookkckfbbgnhdgcbfbicoahejkdoele?hl=en) is a chrome extension that keeps Colab notebooks alive.
 * [colab-ssh](https://github.com/WassimBenzarti/colab-ssh) -> lets you ssh to a colab instance like it’s an EC2 machine and install packages that require full linux functionality
 
-### Kaggle - also Google!
+## Kaggle
 * Free to use
 * GPU Kernels - may run for 1 hour
 * Tensorflow, pytorch & fastai available but you may need to update them
