@@ -13,6 +13,13 @@
 **How to use this repository:** if you know exactly what you are looking for (e.g. you have the paper name) you can `Control+F` to search for it in this page (or search in the raw markdown).
 
 ## Contents
+* [Model training](https://github.com/satellite-image-deep-learning/model-training-and-deployment#model-training)
+* [Free online compute](https://github.com/satellite-image-deep-learning/model-training-and-deployment#free-online-compute)
+* [Deployment](https://github.com/satellite-image-deep-learning/model-training-and-deployment#deployment)
+* [Cloud providers](https://github.com/satellite-image-deep-learning/model-training-and-deployment#cloud-providers)
+* [State of the art engineering](https://github.com/satellite-image-deep-learning/model-training-and-deployment#state-of-the-art-engineering)
+* [Web apps](https://github.com/satellite-image-deep-learning/model-training-and-deployment#web-apps)
+* [Neural nets in space](https://github.com/satellite-image-deep-learning/model-training-and-deployment#neural-nets-in-space)
 
 # Model training
 This section discusses training machine learning models.
