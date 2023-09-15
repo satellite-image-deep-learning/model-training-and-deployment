@@ -10,44 +10,24 @@
 
 </div>
 
-**How to use this repository:** if you know exactly what you are looking for (e.g. you have the paper name) you can `Control+F` to search for it in this page (or search in the raw markdown).
-
-## Contents
-* [Model training](https://github.com/satellite-image-deep-learning/model-training-and-deployment#model-training)
-* [Free online compute](https://github.com/satellite-image-deep-learning/model-training-and-deployment#free-online-compute)
-* [Deployment](https://github.com/satellite-image-deep-learning/model-training-and-deployment#deployment)
-* [AWS](https://github.com/satellite-image-deep-learning/model-training-and-deployment#aws)
-* [Google Cloud](https://github.com/satellite-image-deep-learning/model-training-and-deployment#google-cloud)
-* [Microsoft Azure](https://github.com/satellite-image-deep-learning/model-training-and-deployment#microsoft-azure)
-* [State of the art engineering](https://github.com/satellite-image-deep-learning/model-training-and-deployment#state-of-the-art-engineering)
-* [Web apps](https://github.com/satellite-image-deep-learning/model-training-and-deployment#web-apps)
-* [Neural nets in space](https://github.com/satellite-image-deep-learning/model-training-and-deployment#neural-nets-in-space)
-
 # Model training best practice
 * Almost all imagery data on the internet is in 3 band RGB format, and model training code often requires adaptation to work with multiband data (e.g. 13-band Sentinel 2). Typically this involves updating the number of channels accepted by the first layer of the model, but there are also challenges related to data normalisation
 * In general, classification and object detection models are treated using transfer learning, where the majority of the weights are not updated in training but have been pre computed using standard vision datasets such as ImageNet
 * Since satellite images are typically very large, it is common to chip/tile them before processing. Alternatively checkout [Fully Convolutional Image Classification on Arbitrary Sized Image](https://learnopencv.com/fully-convolutional-image-classification-on-arbitrary-sized-image/) -> TLDR replace the fully-connected layer with a convolution-layer
 * Use image augmentation in train and val, but not test
-* In general, larger models will outperform smaller models, but require larger training datasets
-* If model performance in unsatisfactory, try to increase your dataset size before switching to another model architecture
+* In general, larger models will outperform smaller models, but require larger training datasets. Start with a small model to establish baseline then increase the size
+* If model performance in unsatisfactory, try to increase your dataset size before switching to exotic model architectures
 * In training, whenever possible increase the batch size, as small batch sizes produce poor normalization statistics
 * The vast majority of the literature uses supervised learning with the requirement for large volumes of annotated data, which is a bottleneck to development and deployment. We are just starting to see self-supervised approaches applied to remote sensing data
 * [4-ways-to-improve-class-imbalance](https://towardsdatascience.com/4-ways-to-improve-class-imbalance-for-image-data-9adec8f390f1) discusses the pros and cons of several rebalancing techniques, applied to an aerial dataset. Reason to read: models can reach an accuracy ceiling where majority classes are easily predicted but minority classes poorly predicted. Overall model accuracy may not improve until steps are taken to account for class imbalance.
 * For general guidance on dataset size see [this issue](https://github.com/ultralytics/yolov5/issues/3306)
 * Read [A Recipe for Training Neural Networks](http://karpathy.github.io/2019/04/25/recipe/) by Andrej Karpathy
 * [Seven steps towards a satellite imagery dataset](https://omdena.com/blog/satellite-imagery-dataset/)
-* [Implementing Transfer Learning from RGB to Multi-channel Imagery](https://towardsdatascience.com/implementing-transfer-learning-from-rgb-to-multi-channel-imagery-f87924679166) -> takes a resnet50 model pre-trained on an input of 224x224 pixels with 3 channels (RGB) and updates it for a new input of 480x400 pixels and 15 channels (12 new + RGB) using keras
 * [How to implement augmentations for Multispectral Satellite Images Segmentation using Fastai-v2 and Albumentations](https://towardsdatascience.com/how-to-implement-augmentations-for-multispectral-satellite-images-segmentation-using-fastai-v2-and-ea3965736d1)
-* [Principal Component Analysis: In-depth understanding through image visualization](https://towardsdatascience.com/principal-component-analysis-in-depth-understanding-through-image-visualization-892922f77d9f) applied to Landsat TM images, [with repo](https://github.com/Skumarr53/Principal-Component-Analysis-testing-on-Image-data)
 * [Leveraging Geolocation Data for Machine Learning: Essential Techniques](https://towardsdatascience.com/leveraging-geolocation-data-for-machine-learning-essential-techniques-192ce3a969bc) -> A Gentle Guide to Feature Engineering and Visualization with Geospatial data, in Plain English
-* [3 Tips to Optimize Your Machine Learning Project for Data Labeling](https://www.azavea.com/blog/2020/07/21/3-tips-to-optimize-your-machine-learning-project-for-data-labeling/)
 * [Image Classification Labeling: Single Class versus Multiple Class Projects](https://www.azavea.com/blog/2020/06/08/image-classification-labeling-single-class-versus-multiple-class-projects/)
-* [Labeling Satellite Imagery for Machine Learning](https://www.azavea.com/blog/2020/03/24/labeling-satellite-imagery-for-machine-learning/)
 * [Image Augmentations for Aerial Datasets](https://blog.roboflow.com/image-augmentations-for-aerial-datasets/)
-* [Leveraging satellite imagery for machine learning computer vision applications](https://medium.com/artefact-engineering-and-data-science/leveraging-satellite-imagery-for-machine-learning-computer-vision-applications-d22143f72d94)
-* [Best Practices for Preparing and Augmenting Image Data for CNNs](https://machinelearningmastery.com/best-practices-for-preparing-and-augmenting-image-data-for-convolutional-neural-networks/)
 * [Using TensorBoard While Training Land Cover Models with Satellite Imagery](https://up42.com/blog/tech/using-tensorboard-while-training-land-cover-models-with-satellite-imagery)
-* [An Overview of Model Compression Techniques for Deep Learning in Space](https://medium.com/gsi-technology/an-overview-of-model-compression-techniques-for-deep-learning-in-space-3fd8d4ce84e5)
 * [Visualise Embeddings with Tensorboard](https://medium.com/gsi-technology/visualising-embeddings-using-t-sne-8fd4e31b56e2) -> also checkout the [Tensorflow Embedding Projector](https://projector.tensorflow.org/)
 * [Introduction to Satellite Image Augmentation with Generative Adversarial Networks - video](https://geoawesomeness.com/introduction-to-satellite-image-augmentation-with-generative-adversarial-networks/)
 * [Use Gradio and W&B together to monitor training and view predictions](https://wandb.ai/abidlabs/your-test-project/reports/How-Gradio-and-W-B-Work-Beautifully-Together---Vmlldzo4MTk0MzI)
@@ -73,7 +53,10 @@
 * [ML Tooling 2022](https://developmentseed.org/blog/2022-09-27-ml-tooling) by developmentseed
 * [How to evaluate detection performance…with object or pixel approaches?](https://elisecolin.medium.com/how-to-evaluate-detection-performance-with-object-or-pixel-approaches-bcc3181c3379)
 
-## Metrics
+# Processing large images
+Models are typically trained and inferenced on relatively small images. To inference on a large image it is necessary to use a sliding window over the image, inference on each window, then combining the results. However lower confidence predicitons will be made at the edges of the window where objects may be partially cropped. In segmentation it is typical to crop the edge regions of the prediction, and stitch together predictions into a mosaic. For object detection a framework called [sahi](https://github.com/obss/sahi) has been developed, which intelligently merges bounding box predictions.
+
+# Metrics
 A number of metrics are common to all model types (but can have slightly different meanings in contexts such as object detection), whilst other metrics are very specific to particular classes of model. The correct choice of metric is particularly critical for imbalanced dataset problems, e.g. object detection
 * TP = true positive, FP = false positive, TN = true negative, FN = false negative
 * `Precision` is the % of correct positive predictions, calculated as `precision = TP/(TP+FP)`
@@ -87,8 +70,8 @@ A number of metrics are common to all model types (but can have slightly differe
 * For more comprehensive definitions checkout [Object-Detection-Metrics](https://github.com/rafaelpadilla/Object-Detection-Metrics)
 * [Metrics to Evaluate your Semantic Segmentation Model](https://towardsdatascience.com/metrics-to-evaluate-your-semantic-segmentation-model-6bcb99639aa2)
 
-# Free online compute
-A GPU is required for training deep learning models (but not necessarily for inferencing), and this section lists a couple of free Jupyter environments with GPU available. There is a good overview of online Jupyter development environments [on the fastai site](https://course19.fast.ai). For personal projects I have historically used Google Colab with data hosted on Google Drive. The landscape for GPU providers is constantly changing. I currently recommend [lightning.ai](https://lightning.ai/)
+# Cloud GPUs
+A GPU is required for training deep learning models (but not necessarily for inferencing), and this section lists a couple of free Jupyter environments with GPU available. There is a good overview of online Jupyter development environments [on the fastai site](https://course19.fast.ai). For personal projects I have historically used Google Colab with data hosted on Google Drive. The landscape for GPU providers is constantly changing. I currently recommend [lightning.ai](https://lightning.ai/) or AWS
 
 ## Google Colab
 * Collaboratory [notebooks](https://colab.research.google.com) with GPU as a backend for free for 12 hours at a time. Note that the GPU may be shared with other users, so if you aren't getting good performance try reloading.
@@ -103,7 +86,7 @@ A GPU is required for training deep learning models (but not necessarily for inf
 * Tensorflow, pytorch & fastai available but you may need to update them
 * Advantage that many datasets are already available
 
-# Deployment
+# Model deployment
 This section discusses how to get a trained machine learning & specifically deep learning model into production. For an overview on serving deep learning models checkout [Practical-Deep-Learning-on-the-Cloud](https://github.com/PacktPublishing/-Practical-Deep-Learning-on-the-Cloud). There are many options if you are happy to dedicate a server, although you may want a GPU for batch processing. For serverless use AWS lambda.
 
 ## Rest API on dedicated server
@@ -140,9 +123,6 @@ Using lambda functions allows inference without having to configure or manage th
 * [Object detection inference with AWS Lambda and IceVision (PyTorch)](https://laurenzstrothmann.com/object-detection-inference-aws-lambda-icevision) with [repo](https://github.com/2649/laurenzstrothmann)
 * [Deploying PyTorch on AWS Lambda](https://segments.ai/blog/pytorch-on-lambda)
 * [Example deployment behind an API Gateway Proxy](https://github.com/philschmid/cdk-samples/tree/master/sagemaker-serverless-huggingface-endpoint)
-
-## Inferencing on large images
-Models are typically trained and inferenced on relatively small images, e.g. 640x640 pixels for YOLOv5m. To inference on a large image it is necessary to use a sliding window over the image, inference on each window, then combine the results. However lower confidence predicitons will be made at the edges of the window where objects may be partially cropped. To overcome this a framework called [sahi](https://github.com/obss/sahi) has been developed. An example of how to use sahi with yolo [is here](https://github.com/open-mmlab/mmyolo/blob/dev/demo/large_image_demo.py). For an example of using threading to process a large image see [Fast-Large-Image-Object-Detection-yolov7](https://github.com/shah0nawaz/Fast-Large-Image-Object-Detection-yolov7)
 
 ## Models in the browser
 The model is run in the browser itself on live images, ensuring processing is always with the latest model available and removing the requirement for dedicated server side inferencing
@@ -264,3 +244,4 @@ Processing on board a satellite allows less data to be downlinked. e.g. super-re
 * [Spiral Blue](https://spiralblue.space/) -> startup building edge computers to run AI analytics on-board satellites
 * [RaVAEn](https://github.com/spaceml-org/RaVAEn) -> a lightweight, unsupervised approach for change detection in satellite data based on Variational Auto-Encoders (VAEs) with the specific purpose of on-board deployment. It flags changed areas to prioritise for downlink, shortening the response time
 * [AWS successfully runs AWS compute and machine learning services on an orbiting satellite in a first-of-its kind space experiment](https://aws.amazon.com/blogs/publicsector/aws-successfully-runs-aws-compute-machine-learning-services-orbiting-satellite-first-space-experiment/)
+* [An Overview of Model Compression Techniques for Deep Learning in Space](https://medium.com/gsi-technology/an-overview-of-model-compression-techniques-for-deep-learning-in-space-3fd8d4ce84e5)
