@@ -110,7 +110,8 @@ GPRC is a framework for implementing Remote Procedure Call (RPC) via HTTP/2. Dev
 If you are happy to live with some lock-in, these are good options:
 * [Tensorflow serving](https://www.tensorflow.org/tfx/guide/serving) is limited to Tensorflow models
 * [TensorRT_Inference](https://github.com/lzh420202/TensorRT_Inference) -> An oriented object detection framework based on TensorRT
-* [Pytorch serve](https://github.com/pytorch/serve) is easy to use, limited to Pytorch models, and can be deployed via AWS Sagemaker, See [pl-lightning-torchserve-neptune-template](https://github.com/i008/pl-lightning-torchserve-neptune-template)
+* [torch serve](https://github.com/pytorch/serve) -> limited to Pytorch models, no longer maintained
+* [LitServe](https://github.com/Lightning-AI/LitServe) -> augments FastAPI with features like batching, streaming, and GPU autoscaling
 * [sagemaker-inference-toolkit](https://github.com/aws/sagemaker-inference-toolkit) -> Serve machine learning models within a Docker container using AWS SageMaker
 
 ## Framework agnostic model serving
