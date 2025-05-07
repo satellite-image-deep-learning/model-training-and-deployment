@@ -184,6 +184,7 @@ Once your model is deployed you will want to monitor for data errors, broken pip
 * [Hosting YOLOv8 PyTorch models on Amazon SageMaker Endpoints](https://aws.amazon.com/blogs/machine-learning/hosting-yolov8-pytorch-model-on-amazon-sagemaker-endpoints/)
 * [Automatically convert satellite imagery to Cloud-Optimized GeoTIFFs for hosting in Amazon S3](https://aws.amazon.com/blogs/storage/automatically-convert-satellite-imagery-to-cloud-optimized-geotiffs-for-hosting-in-amazon-s3/)
 * [How to deploy your ML model using DagsHub+MLflow+AWS Lambda](https://towardsdatascience.com/how-to-deploy-your-ml-model-using-dagshub-mlflow-aws-lambda-c85e07b06ef6)
+* [AWS-Based Deployment for a Solar Plant Detection from Satellite Imagery](https://github.com/FederCO23/AWS-ML_Satellite_Deployment)
 
 # Google Cloud
 * For storage use [Cloud Storage](https://cloud.google.com/storage) (AWS S3 equivalent)
