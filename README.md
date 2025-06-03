@@ -185,6 +185,7 @@ Once your model is deployed you will want to monitor for data errors, broken pip
 * [Automatically convert satellite imagery to Cloud-Optimized GeoTIFFs for hosting in Amazon S3](https://aws.amazon.com/blogs/storage/automatically-convert-satellite-imagery-to-cloud-optimized-geotiffs-for-hosting-in-amazon-s3/)
 * [How to deploy your ML model using DagsHub+MLflow+AWS Lambda](https://towardsdatascience.com/how-to-deploy-your-ml-model-using-dagshub-mlflow-aws-lambda-c85e07b06ef6)
 * [AWS-Based Deployment for a Solar Plant Detection from Satellite Imagery](https://github.com/FederCO23/AWS-ML_Satellite_Deployment)
+* [Leveraging Geospatial Foundation Models (GeoFMs) for Earth-Scale Remote Ecosystem Monitoring](https://github.com/aws-samples/sample-geospatial-foundation-models-on-aws) -> with [blog post](https://aws.amazon.com/blogs/machine-learning/revolutionizing-earth-observation-with-geospatial-foundation-models-on-aws/)
 
 # Google Cloud
 * For storage use [Cloud Storage](https://cloud.google.com/storage) (AWS S3 equivalent)
