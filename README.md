@@ -55,6 +55,10 @@
 # Processing large images
 Models are typically trained and inferenced on relatively small images. To inference on a large image it is necessary to use a sliding window over the image, inference on each window, then combining the results. However lower confidence predicitons will be made at the edges of the window where objects may be partially cropped. In segmentation it is typical to crop the edge regions of the prediction, and stitch together predictions into a mosaic. For object detection a framework called [sahi](https://github.com/obss/sahi) has been developed, which intelligently merges bounding box predictions.
 
+## Streaming datasets
+- [pytorch-cloud-geotiff-optimization](https://github.com/microsoft/pytorch-cloud-geotiff-optimization) -> A toolkit for optimizing cloud GeoTIFF streaming in PyTorch. Achieves 20x throughput and 90% GPU utilization through optimized data loading and compression.
+- [litdata](https://github.com/Lightning-AI/litData) -> by Lightning
+
 # Metrics
 A number of metrics are common to all model types (but can have slightly different meanings in contexts such as object detection), whilst other metrics are very specific to particular classes of model. The correct choice of metric is particularly critical for imbalanced dataset problems, e.g. object detection
 * TP = true positive, FP = false positive, TN = true negative, FN = false negative
