@@ -108,11 +108,15 @@ A common approach to serving up deep learning model inference code is to wrap it
 GPRC is a framework for implementing Remote Procedure Call (RPC) via HTTP/2. Developed and maintained mainly by Google, it is widely used in the industry. It allows two machines to communicate, similar to HTTP but with better syntax and performance.
 * [deploy-models-with-grpc-pytorch-asyncio](https://github.com/FrancescoSaverioZuppichini/deploy-models-with-grpc-pytorch-asyncio)
 
+## TorchServe
+Note: no longer actively maintained
+* https://github.com/pytorch/serve
+* [Deploying Presto to Google Cloud Vertex AI with TorchServe](https://nasaharvest.github.io/presto-embeddings/)
+
 ## Framework specific model serving
 If you are happy to live with some lock-in, these are good options:
 * [Tensorflow serving](https://www.tensorflow.org/tfx/guide/serving) is limited to Tensorflow models
 * [TensorRT_Inference](https://github.com/lzh420202/TensorRT_Inference) -> An oriented object detection framework based on TensorRT
-* [torch serve](https://github.com/pytorch/serve) -> limited to Pytorch models, no longer maintained
 * [LitServe](https://github.com/Lightning-AI/LitServe) -> augments FastAPI with features like batching, streaming, and GPU autoscaling
 * [sagemaker-inference-toolkit](https://github.com/aws/sagemaker-inference-toolkit) -> Serve machine learning models within a Docker container using AWS SageMaker
 
