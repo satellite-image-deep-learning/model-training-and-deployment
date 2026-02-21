@@ -103,6 +103,7 @@ A common approach to serving up deep learning model inference code is to wrap it
 * [API algorithm to apply object detection model to terabyte size satellite images with 800% better performance and 8 times less resources usage](https://github.com/orhannurkan/API-algorithm-for-terabyte-size-images-)
 * [clearcut_detection](https://github.com/QuantuMobileSoftware/clearcut_detection) -> django backend
 * [airbus-ship-detection](https://github.com/jancervenka/airbus-ship-detection) -> CNN with REST API
+* [ftw-inference-api](https://github.com/fieldsoftheworld/ftw-inference-api) -> FastAPI-based implementation of the Fields of the World Inference API based on the OpenAPI specification
 
 ## Model serving with GRPC
 GPRC is a framework for implementing Remote Procedure Call (RPC) via HTTP/2. Developed and maintained mainly by Google, it is widely used in the industry. It allows two machines to communicate, similar to HTTP but with better syntax and performance.
