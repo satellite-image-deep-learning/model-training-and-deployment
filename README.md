@@ -115,7 +115,7 @@ Note: no longer actively maintained
 
 ## Framework specific model serving
 If you are happy to live with some lock-in, these are good options:
-* [Tensorflow serving](https://www.tensorflow.org/tfx/guide/serving) is limited to Tensorflow models
+* [Tensorflow serving](https://github.com/tensorflow/serving) is limited to Tensorflow models
 * [TensorRT_Inference](https://github.com/lzh420202/TensorRT_Inference) -> An oriented object detection framework based on TensorRT
 * [LitServe](https://github.com/Lightning-AI/LitServe) -> augments FastAPI with features like batching, streaming, and GPU autoscaling
 * [sagemaker-inference-toolkit](https://github.com/aws/sagemaker-inference-toolkit) -> Serve machine learning models within a Docker container using AWS SageMaker
@@ -127,7 +127,7 @@ If you are happy to live with some lock-in, these are good options:
 ## Using lambda functions - i.e. serverless
 Using lambda functions allows inference without having to configure or manage the underlying infrastructure
 * On AWS either use regular lambdas from AWS or [SageMaker Serverless Inference](https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html)
-* [Deploying PyTorch on AWS Lambda](https://segments.ai/blog/pytorch-on-lambda)
+* [Deploying PyTorch on AWS Lambda](https://aws.amazon.com/blogs/machine-learning/using-container-images-to-run-pytorch-models-in-aws-lambda/)
 * [Example deployment behind an API Gateway Proxy](https://github.com/philschmid/cdk-samples/tree/master/sagemaker-serverless-huggingface-endpoint)
 
 ## Models in the browser
