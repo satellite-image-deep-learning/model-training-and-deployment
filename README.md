@@ -123,6 +123,7 @@ If you are happy to live with some lock-in, these are good options:
 ## Framework agnostic model serving
 * The [Triton Inference Server](https://github.com/triton-inference-server/server) provides an optimized cloud and edge inferencing solution. Read [CAPE Analytics Uses Computer Vision to Put Geospatial Data and Risk Information in Hands of Property Insurance Companies](https://blogs.nvidia.com/blog/2021/05/21/cape-analytics-computer-vision/)
 * [RedisAI](https://github.com/RedisAI/RedisAI) is a Redis module for executing Deep Learning/Machine Learning models and managing their data
+* [gdal-unet](https://github.com/isaaccorley/gdal-unet) -> Run pretrained U-Net inference through the GDAL CLI without requiring Python at deploy time
 
 ## Using lambda functions - i.e. serverless
 Using lambda functions allows inference without having to configure or manage the underlying infrastructure
