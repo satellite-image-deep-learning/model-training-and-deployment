@@ -139,11 +139,11 @@ The general approaches are outlined in [this article from NVIDIA](https://develo
 
 ## MLOps
 [MLOps](https://en.wikipedia.org/wiki/MLOps) is a set of practices that aims to deploy and maintain machine learning models in production reliably and efficiently.
-* [How to Build MLOps Pipelines with GitHub Actions](https://neptune.ai/blog/build-mlops-pipelines-with-github-actions-guide/)
+* [How to Build MLOps Pipelines with GitHub Actions](https://web.archive.org/web/20231202174932/https://neptune.ai/blog/build-mlops-pipelines-with-github-actions-guide)
 
 ## Model monitoring
 Once your model is deployed you will want to monitor for data errors, broken pipelines, and model performance degradation/drift [ref](https://towardsdatascience.com/deploy-and-monitor-your-ml-application-with-flask-and-whylabs-4cd1e757c94b)
-* [Blog post by Neptune: Doing ML Model Performance Monitoring The Right Way](https://neptune.ai/blog/ml-model-performance-monitoring)
+* [Blog post by Neptune: Doing ML Model Performance Monitoring The Right Way](https://web.archive.org/web/20251006161102/https://neptune.ai/blog/ml-model-performance-monitoring)
 * [whylogs](https://github.com/whylabs/whylogs) -> Profile and monitor your ML data pipeline end-to-end
 
 ## Model tracking, versioning, specification & compilation
