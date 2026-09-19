@@ -150,6 +150,7 @@ Once your model is deployed you will want to monitor for data errors, broken pip
 * [dvc](https://dvc.org/) -> a git extension to keep track of changes in data, source code, and ML models together
 * [Weights and Biases](https://wandb.ai/) -> keep track of your ML projects. Log hyperparameters and output metrics from your runs, then visualize and compare results and quickly share findings with your colleagues
 * [geo-ml-model-catalog](https://github.com/radiantearth/geo-ml-model-catalog) -> provides a common metadata definition for ML models that operate on geospatial data
+* [fAIr-models](https://github.com/hotosm/fAIr-models) -> model registry and ML pipeline orchestration for deployable GeoAI models, using STAC, MLflow, and ZenML
 * [hummingbird](https://github.com/microsoft/hummingbird) ->  a library for compiling trained traditional ML models into tensor computations, e.g. scikit learn model to pytorch for fast inference on a GPU
 * [deepchecks](https://github.com/deepchecks/deepchecks) -> Deepchecks is a Python package for comprehensively validating your machine learning models and data with minimal effort
 
