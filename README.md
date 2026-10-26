@@ -106,6 +106,7 @@ A common approach to serving up deep learning model inference code is to wrap it
 ## Model serving with GRPC
 GPRC is a framework for implementing Remote Procedure Call (RPC) via HTTP/2. Developed and maintained mainly by Google, it is widely used in the industry. It allows two machines to communicate, similar to HTTP but with better syntax and performance.
 * [deploy-models-with-grpc-pytorch-asyncio](https://github.com/FrancescoSaverioZuppichini/deploy-models-with-grpc-pytorch-asyncio)
+* [Anaximander](https://github.com/microsoft/nxmndr) -> geospatial AI inference server supporting PyTorch, ONNX, Hugging Face and TorchHub models through streaming or batch gRPC and distributed Torch RPC, with model caching and an optional Azure OpenAI proxy.
 
 ## TorchServe
 Note: no longer actively maintained
