@@ -87,7 +87,7 @@ A GPU is required for training deep learning models (but not necessarily for inf
 * Advantage that many datasets are already available
 
 # Model deployment
-This section discusses how to get a trained machine learning & specifically deep learning model into production. For an overview on serving deep learning models checkout [Practical-Deep-Learning-on-the-Cloud](https://github.com/PacktPublishing/-Practical-Deep-Learning-on-the-Cloud). There are many options if you are happy to dedicate a server, although you may want a GPU for batch processing. For serverless use AWS lambda.
+This section discusses how to get a trained machine learning & specifically deep learning model into production.
 
 ## Rest API on dedicated server
 A common approach to serving up deep learning model inference code is to wrap it in a rest API. The API can be implemented in python (flask or FastAPI), and hosted on a dedicated server e.g. EC2 instance. Note that making this a scalable solution will require significant experience.
