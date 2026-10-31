@@ -69,6 +69,7 @@ A number of metrics are common to all model types (but can have slightly differe
 * `IoU` is an object detection specific metric, being the average intersect over union of prediction and ground truth bounding boxes for a given confidence threshold
 * `mAP@0.5` is another object detection specific metric, being the mean value of the average precision for each class. `@0.5` sets a threshold for how much of the predicted bounding box overlaps the ground truth bounding box, i.e. "minimum 50% overlap"
 * For more comprehensive definitions checkout [Object-Detection-Metrics](https://github.com/rafaelpadilla/Object-Detection-Metrics)
+* [olmoearth_inferenceX](https://github.com/2imi9/olmoearth_inferenceX) -> evaluates Earth-observation map outputs with confidence-based review, sampled-label accuracy estimates, uncertainty intervals and comparisons between maps; supports OlmoEarth and other model outputs without running inference.
 
 # Cloud GPUs
 A GPU is required for training deep learning models (but not necessarily for inferencing), and this section lists a couple of free Jupyter environments with GPU available. There is a good overview of online Jupyter development environments [on the fastai site](https://course19.fast.ai). For personal projects I have historically used Google Colab with data hosted on Google Drive. The landscape for GPU providers is constantly changing. I currently recommend [lightning.ai](https://lightning.ai/) or AWS
